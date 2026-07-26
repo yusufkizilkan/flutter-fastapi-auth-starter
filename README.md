@@ -1,6 +1,6 @@
 # Flutter + FastAPI Auth Starter
 
-A free, production-shaped **email/password + Google Sign-In** starter for Flutter apps backed by FastAPI and PostgreSQL.
+A free **email/password + Google Sign-In** starter with production-ready auth flows, for Flutter apps backed by FastAPI and PostgreSQL.
 
 ![Flutter](https://img.shields.io/badge/Flutter-3.24+-02569B?logo=flutter&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.115-009688?logo=fastapi&logoColor=white)
@@ -12,6 +12,8 @@ JWT access + refresh tokens, secure token storage, dark/light themes, form valid
 > Interactive API docs: after `docker compose up`, open [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
 
 ---
+
+▶️ **5-minute setup video:** *(coming soon)*
 
 ## Screenshots
 
@@ -216,10 +218,21 @@ flutter-fastapi-auth-starter/
 
 ---
 
+## What's next?
+
+This starter is the foundation of a full SaaS kit I'm building — subscriptions (RevenueCat), push notifications, Apple Sign-In, profile management and an admin panel.
+
+<!-- TODO: replace with the Gumroad product URL once it's live -->
+Want to know when it ships? → **Join the waitlist** *(link coming soon)*
+
+Found this useful? A ⭐ helps more developers discover it.
+
+---
+
 ## FAQ
 
 **Is this production-ready?**  
-The auth *flows* are production-shaped (hashing, JWT types, refresh, secure storage). Before real traffic: change `SECRET_KEY`, lock CORS, send real reset emails, rate-limit auth routes, and run HTTPS.
+The auth *flows* are production-ready (hashing, JWT types, refresh, secure storage). Before real traffic: change `SECRET_KEY`, lock CORS, send real reset emails, rate-limit auth routes, and run HTTPS.
 
 **Why does forgot-password not send email?**  
 Starters shouldn’t force an SMTP vendor. The endpoint is wired; the reset token is printed in the API log for local testing. Hook SendGrid/Resend/Mailgun in one place.
