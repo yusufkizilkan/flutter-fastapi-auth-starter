@@ -236,6 +236,17 @@ This repo is intentionally Postgres + Compose (one-command demo). Swapping engin
 **Docker isn’t installed**  
 Install [Docker Desktop](https://www.docker.com/products/docker-desktop/), start it, then `docker compose up --build` from `backend/`.
 
+**Android build fails with a shader / "Could not write file" error on Windows**  
+If your project path contains non-ASCII characters (e.g. `Masaüstü`, `Büro`), Flutter's shader compiler can fail. Map the app folder to a drive letter and build from there:
+
+```powershell
+subst Y: "C:\path\to\flutter-fastapi-auth-starter\app"
+cd Y:\
+flutter run
+```
+
+(`android.overridePathCheck=true` is already set in `gradle.properties` for the Gradle side.)
+
 ---
 
 ## License
