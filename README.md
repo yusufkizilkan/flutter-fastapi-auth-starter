@@ -54,7 +54,7 @@ Requires: **Docker Desktop** (running), **Flutter 3.24+**, Git. Ports **8000** a
 **1. Backend** (first terminal):
 
 ```bash
-git clone https://github.com/<YOU>/flutter-fastapi-auth-starter.git
+git clone https://github.com/yusufkizilkan/flutter-fastapi-auth-starter.git
 cd flutter-fastapi-auth-starter/backend
 cp .env.example .env
 docker compose up --build
