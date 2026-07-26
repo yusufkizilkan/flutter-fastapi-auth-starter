@@ -2,9 +2,24 @@
 
 A free, production-shaped **email/password + Google Sign-In** starter for Flutter apps backed by FastAPI and PostgreSQL.
 
+![Flutter](https://img.shields.io/badge/Flutter-3.24+-02569B?logo=flutter&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.115-009688?logo=fastapi&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-4169E1?logo=postgresql&logoColor=white)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
 JWT access + refresh tokens, secure token storage, dark/light themes, form validation, and a one-command backend.
 
 > Interactive API docs: after `docker compose up`, open [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
+
+---
+
+## Screenshots
+
+<!-- Add screenshots to docs/screenshots/ and update the paths below -->
+
+| Login (light) | Login (dark) | Register |
+|---------------|--------------|----------|
+| ![Login light](docs/screenshots/login-light.png) | ![Login dark](docs/screenshots/login-dark.png) | ![Register](docs/screenshots/register.png) |
 
 ---
 
@@ -32,9 +47,11 @@ JWT access + refresh tokens, secure token storage, dark/light themes, form valid
 
 ---
 
-## Quick start (5 commands)
+## Quick start
 
-Requires: **Docker Desktop**, **Flutter 3.24+**, Git.
+Requires: **Docker Desktop** (running), **Flutter 3.24+**, Git. Ports **8000** and **5432** must be free.
+
+**1. Backend** (first terminal):
 
 ```bash
 git clone https://github.com/<YOU>/flutter-fastapi-auth-starter.git
@@ -43,7 +60,11 @@ cp .env.example .env
 docker compose up --build
 ```
 
-In another terminal:
+Wait for `Application startup complete`, then check [http://127.0.0.1:8000/health](http://127.0.0.1:8000/health) and [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs).
+
+> Windows PowerShell: `cp` works as-is (alias of `Copy-Item`).
+
+**2. Flutter app** (second terminal):
 
 ```bash
 cd flutter-fastapi-auth-starter/app
@@ -51,15 +72,15 @@ flutter pub get
 flutter run
 ```
 
-Then: open the app → **Create an account** → sign in. Try the API at `/docs`.
+Then: open the app → **Create an account** → sign in.
 
 | Platform | Default API URL |
 |----------|-----------------|
 | iOS simulator / desktop / web | `http://127.0.0.1:8000` |
-| Android emulator | `http://10.0.2.2:8000` |
+| Android emulator | `http://10.0.2.2:8000` (automatic) |
 | Physical device | `flutter run --dart-define=API_BASE=http://<YOUR_LAN_IP>:8000` |
 
-Rebrand without hunting files:
+### Rebrand without hunting files
 
 - App name / API / Google client ID → `app/lib/core/app_config.dart` (+ `--dart-define`)
 - Colors → `app/lib/core/app_theme.dart`
@@ -203,6 +224,9 @@ The auth *flows* are production-shaped (hashing, JWT types, refresh, secure stor
 **Why does forgot-password not send email?**  
 Starters shouldn’t force an SMTP vendor. The endpoint is wired; the reset token is printed in the API log for local testing. Hook SendGrid/Resend/Mailgun in one place.
 
+**`docker compose up` fails with a port error**  
+Something else is using port 8000 or 5432 (a local PostgreSQL install is the usual suspect). Stop it, or change the host port mapping in `backend/docker-compose.yml`.
+
 **Can I use SQLite instead of Postgres?**  
 This repo is intentionally Postgres + Compose (one-command demo). Swapping engines is possible via SQLAlchemy URL changes, but not the default path.
 
@@ -210,37 +234,7 @@ This repo is intentionally Postgres + Compose (one-command demo). Swapping engin
 `app/lib/core/app_theme.dart` — `seed`, `lightBg`, `darkBg`.
 
 **Docker isn’t installed**  
-Install [Docker Desktop](https://www.docker.com/products/docker-desktop/), then `docker compose up --build` from `backend/`.
-
----
-
-## Suggested Gumroad listing (pay what you want)
-
-**Title:** Flutter + FastAPI Auth Starter (Free / PWYW)
-
-**Subtitle:** JWT + Google Sign-In boilerplate — Docker one-command backend
-
-**Body (paste):**
-
-> Skip two weeks of auth wiring.
->
-> This starter gives you a Flutter client (Riverpod, Dio, secure storage, go_router) and a FastAPI + PostgreSQL backend with register, login, refresh, forgot-password, /me, and Google Sign-In — plus a README that actually walks through Google Cloud OAuth and SHA-1.
->
-> `docker compose up` → open `/docs` → `flutter run` → register.
->
-> Pay what you want. Stars and feedback help more than $0.
-
-Upload: product screenshots (login light/dark, register) + a zip of this repo. Enable email collection.
-
----
-
-## Distribution checklist
-
-1. Push this repo **public** on GitHub with topics: `flutter`, `fastapi`, `boilerplate`, `jwt`, `authentication`
-2. Gumroad PWYW + zip + email capture
-3. X thread with screenshots + repo + Gumroad links
-4. r/FlutterDev post — humble tone, ask for feedback (no hard sell)
-5. Answer every first-week issue quickly
+Install [Docker Desktop](https://www.docker.com/products/docker-desktop/), start it, then `docker compose up --build` from `backend/`.
 
 ---
 
