@@ -1,0 +1,30 @@
+# Backend
+backend/.env
+backend/**/__pycache__/
+backend/.venv/
+backend/venv/
+backend/_smoke.db
+*.pyc
+*.db
+
+# Flutter
+app/.dart_tool/
+app/.flutter-plugins
+app/.flutter-plugins-dependencies
+app/.packages
+app/build/
+app/.idea/
+app/*.iml
+app/**/Generated.xcconfig
+app/**/flutter_export_environment.sh
+app/android/local.properties
+app/android/.gradle/
+app/android/app/google-services.json
+app/ios/Runner/GoogleService-Info.plist
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
