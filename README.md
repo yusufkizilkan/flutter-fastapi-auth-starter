@@ -11,8 +11,7 @@ JWT access + refresh tokens, secure token storage, dark/light themes, form valid
 
 > Interactive API docs: after `docker compose up`, open [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
 
----
-> ▶️ **[Watch the 3-minute setup video](https://www.youtube.com/watch?v=x1ByQMPEy8g)**
+> ▶️ **[Watch the 3-minute setup video](https://www.youtube.com/watch?v=x1ByQMPEy8g)** · 📦 **[Download on Gumroad](https://kizilkan2.gumroad.com/l/flutter-auth-starter)** (free, pay what you want)
 
 ## Screenshots
 
@@ -219,10 +218,9 @@ flutter-fastapi-auth-starter/
 
 ## What's next?
 
-This starter is the foundation of a full SaaS kit I'm building — subscriptions (RevenueCat), push notifications, Apple Sign-In, profile management and an admin panel.
+This starter is the foundation of a full SaaS kit I'm building — subscriptions (RevenueCat), push notifications, Apple Sign-In and an admin panel.
 
-<!-- TODO: replace with the Gumroad product URL once it's live -->
-Want to know when it ships? → **Join the waitlist** *(link coming soon)*
+→ [Grab the starter free on Gumroad](https://kizilkan2.gumroad.com/l/flutter-auth-starter) — you'll be first to hear about the full kit.
 
 Found this useful? A ⭐ helps more developers discover it.
 
