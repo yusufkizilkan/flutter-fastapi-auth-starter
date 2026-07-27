@@ -7,11 +7,11 @@ A free **email/password + Google Sign-In** starter with production-ready auth fl
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-4169E1?logo=postgresql&logoColor=white)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
+> ▶️ **[Watch the 3-minute setup video](https://www.youtube.com/watch?v=x1ByQMPEy8g)** · 📦 **[Download on Gumroad](https://kizilkan2.gumroad.com/l/flutter-auth-starter)** (free, pay what you want)
+
 JWT access + refresh tokens, secure token storage, dark/light themes, form validation, and a one-command backend.
 
 > Interactive API docs: after `docker compose up`, open [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
-
-> ▶️ **[Watch the 3-minute setup video](https://www.youtube.com/watch?v=x1ByQMPEy8g)** · 📦 **[Download on Gumroad](https://kizilkan2.gumroad.com/l/flutter-auth-starter)** (free, pay what you want)
 
 ## Screenshots
 
