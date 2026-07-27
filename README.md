@@ -12,8 +12,7 @@ JWT access + refresh tokens, secure token storage, dark/light themes, form valid
 > Interactive API docs: after `docker compose up`, open [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
 
 ---
-
-▶️ **5-minute setup video:** *(coming soon)*
+> ▶️ **[Watch the 3-minute setup video](https://www.youtube.com/watch?v=x1ByQMPEy8g)**
 
 ## Screenshots
 
